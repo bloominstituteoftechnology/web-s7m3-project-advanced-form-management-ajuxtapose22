@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Titillium Web', sans-serif;
-  border: 1rem solid #ff4b00;
+  border: 1rem solid #39c140;
 }
 
 #root,
@@ -19,7 +19,7 @@ h1,
 h2,
 h3,
 h4 {
-  color: #93005a;
+  color:  #2c9632;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -48,11 +48,16 @@ form {
   padding: 1rem;
 }
 
+.inputGroup:hover {
+  border-color: #39c140; /* Change border color on hover */
+  box-shadow: 0 0 8px  #39c140; /* Add a box shadow on hover */
+}
+
 input[type=submit] {
-  border: 1px solid lightcoral;
+  border: 1px solid  #39c140;
   border-radius: 3px;
   background-color: white;
-  color: #ff4b00;
+  color:  #39c140;
 }
 
 input[type=submit]:hover {
@@ -61,7 +66,7 @@ input[type=submit]:hover {
 
 input,
 select {
-  border: 1px solid lightcoral;
+  border: 1px solid  #39c140;
   height: 2rem;
   width: 100%;
 }
@@ -79,7 +84,7 @@ input[type=submit]:disabled {
 }
 
 fieldset {
-  border: 1px solid lightcoral;
+  border: 1px solid  #39c140;
 }
 
 label {
