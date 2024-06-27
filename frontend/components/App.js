@@ -47,11 +47,10 @@ const [errors, setErrors] = useState(getIntitialErrors())
 // })
 
 const onChange = evt => {
-  let { type, name, value, checked, oninput } = evt.target
-  console.log(onmouseover)
-  console.log(evt)
-  // value = type == 'checkbox' ? checked : value
-  // setValues({...values, [name]: value})
+  let { type, name, value, checked } = evt.target
+  value = type == 'checkbox' ? checked : value
+  setValues({...values, [name]: value})
+  console.log(`Name: ${name} Value: ${value} `)
   // yup.reach(userSchema, name).validate(value)
   //   .then(() => setErrors({...errors, [name]: ''}))
   //   .catch((err) => setErrors({...errors, [name]: err.errors[0] }))
@@ -85,26 +84,48 @@ const onSubmit = evt => {
       <div className='inputGroup'>
         <fieldset>
           <legend>Favorite Language</legend>
-          <label>
+          <label> 
               <input
                 checked={values.favLanguage === 'javascript'}
                 type="radio"
                 name="favLanguage"
                 value="javascript"
                 onChange={onChange}
-              >
-              </input>
+              /> Javscript
+              </label>
+          <label>
+            <input
+              checked={values.favLanguage === 'rust'}
+              type='radio'
+              name="favLanguage"
+              value="rust"
+              onChange={onChange}
+            /> Rust
           </label>
         </fieldset>
         </div>
 
       {/* ///// Fav Food DIV */}
         <div className='inputGroup'>
-        Favorite Food
+          <label htmlFor="favFood" >Favorite Food: </label>
+          <select id='favFood' name='favFood' value={values.favFood} onChange={onChange}>
+            <option value="">--Select Language--</option>
+            <option value="pizza">Pizza</option>
+            <option value="spaghetti">Spaghetti</option>
+            <option value="broccoli">Broccoli</option>
+          </select>
         </div>
       {/* ///// Agree Terms DIV */}
-          <div className='inputGroup'>
-        Agree to our terms
+        <div className='inputGroup'>
+           <label>
+              <input
+                type='checkbox'
+                id='checkbox'
+                name='agreement'
+                checked={values.agreement}
+                onChange={onChange}
+              /> Agree to terms
+          </label>
         </div>
 
         {/* ////// SUBMIT BUTTON DIV WITH INPUT */}

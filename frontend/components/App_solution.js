@@ -119,7 +119,13 @@ export default function App() {
 
         <div className="inputGroup">
           <label htmlFor="username">Username:</label>
-          <input value={values.username} onChange={onChange} id="username" name="username" type="text" placeholder="Type Username" />
+          <input 
+            value={values.username}
+            onChange={onChange} 
+            id="username" 
+            name="username" 
+            type="text" 
+            placeholder="Type Username" />
           { errors.username && <div className="validation">{errors.username}</div>
   }      </div>
 
@@ -127,11 +133,20 @@ export default function App() {
           <fieldset>
             <legend>Favorite Language:</legend>
             <label>
-              <input checked={values.favLanguage == 'javascript'} onChange={onChange} type="radio" name="favLanguage" value="javascript" />
-              JavaScript
+              <input 
+                checked={values.favLanguage == 'javascript'} 
+                onChange={onChange} type="radio" 
+                name="favLanguage" 
+                value="javascript" />
+                JavaScript
             </label>
             <label>
-              <input checked={values.favLanguage == 'rust'} onChange={onChange} type="radio" name="favLanguage" value="rust" />
+              <input 
+                checked={values.favLanguage == 'rust'} 
+                onChange={onChange} 
+                type="radio" 
+                name="favLanguage" 
+                value="rust" />
               Rust
             </label>
           </fieldset>
@@ -151,8 +166,13 @@ export default function App() {
 
         <div className="inputGroup">
           <label>
-            <input checked={values.agreement} onChange={onChange} id="agreement" type="checkbox" name="agreement" />
-            Agree to our terms
+            <input 
+              checked={values.agreement} 
+              onChange={onChange} 
+              id="agreement" 
+              type="checkbox" 
+              name="agreement" />
+              Agree to our terms
           </label>
           { errors.agreement && <div className="validation">{errors.agreement}</div>
  }       </div>
